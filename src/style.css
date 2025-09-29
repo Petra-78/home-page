@@ -19,11 +19,16 @@ body {
   flex-direction: column;
   width: 100%;
 }
+section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 
 p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.2rem;
-  text-align: left;
+  text-align: justify;
   color: white;
 }
 
@@ -39,6 +44,7 @@ i:hover {
 
 .main-container {
   min-height: 100vh;
+  width: 100%;
   background: url(./images/background-pattern.png) right no-repeat;
   display: flex;
   align-items: center;
@@ -73,8 +79,11 @@ h1 {
 }
 
 .about-me-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
+  max-width: 1300px;
+  padding: 0px 40px 0px 40px;
 }
 
 .about-me {
@@ -83,8 +92,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: start;
-  min-height: 100vh;
-  width: 50%;
+  padding: 10%;
   gap: 40px;
   background: url(./images/background-wavy-circle.png) left bottom no-repeat;
   background-size: 500px;
@@ -94,7 +102,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
   background-image: url(./images/background-wavy-circle.png);
   background-position: top 20% right;
   background-repeat: no-repeat;
@@ -102,7 +109,10 @@ h1 {
 }
 
 .about-me-img-pic {
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 500px;
 }
 
 h2 {
@@ -116,7 +126,6 @@ h2 {
 .about-me-paragraph {
   font-family: 'Raleway', sans-serif;
   font-size: 20px;
-  width: 500px;
   text-align: justify;
 }
 
@@ -134,7 +143,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   max-width: 1200px;
   margin: 40px 40px 0px 40px;
   gap: 30px;
@@ -148,7 +157,7 @@ h2 {
   min-height: 500px;
   min-width: 200px;
   padding: 40px;
-  gap: 10px;
+  gap: 15px;
   background-image: url(./images/project-background.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -204,13 +213,13 @@ h3 {
   background-size: 500px;
 }
 
-@media (min-width: 550px) and (max-width: 720px) {
+@media (max-width: 950px) {
   .container {
     background-size: 100%;
     background-position: center;
     min-height: 100vh;
-
     gap: 10px;
+    margin-left: 0px;
   }
 
   .main-container {
@@ -230,7 +239,6 @@ h3 {
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Inconsolata', monospace;
-
     text-align: left;
   }
 
@@ -270,16 +278,13 @@ h3 {
     font-size: 35px;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
-    color: rgb(104, 89, 89);
     text-align: left;
   }
 
   .about-me-paragraph {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    width: 80%;
     text-align: justify;
-    padding: 20px;
   }
 
   .portfolio {
@@ -288,51 +293,23 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 100%;
-    margin-top: 35%;
+    margin-top: 50px;
   }
 
   .portfolio-inner {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 10%;
-    gap: 20px;
-  }
-
-  .project {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: auto;
-    width: 80%;
-    padding: 10%;
-    background-image: url(./images/project-background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 
   .portfolio-img {
-    width: 70%;
     margin-top: 40px;
   }
 
   h3 {
     font-size: 1.6rem;
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 500;
-    color: white;
-    text-align: center;
-    margin-bottom: 0px;
   }
 
   .project-paragraphs {
-    text-align: center;
     font-size: 16px;
-    width: 80%;
   }
 }
 
@@ -342,12 +319,11 @@ h3 {
     background-position: center;
     background-image: url(./images/title-background-phone.png);
     min-height: 100vh;
-
     gap: 30px;
   }
 
   .main-container {
-    min-height: 100vh;
+    justify-content: center;
   }
 
   h1 {
@@ -371,6 +347,7 @@ h3 {
   .about-me-section {
     display: flex;
     flex-direction: column;
+    gap: 50px;
   }
 
   .about-me {
@@ -382,17 +359,12 @@ h3 {
     width: 100%;
     background: url(./images/background-wavy-circle.png) left bottom no-repeat;
     background-size: 300px;
+    padding: 0px;
   }
 
   .about-me-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-image: url(./images/background-wavy-circle.png);
-    background-position: top 20% right;
     background-repeat: no-repeat;
-    background-size: 350px;
+    background-size: contain;
   }
 
   .about-me-img-pic {
@@ -409,49 +381,12 @@ h3 {
   }
 
   .about-me-paragraph {
-    font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    width: 80%;
-    text-align: justify;
-    padding: 20px;
-  }
-
-  .portfolio {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 35%;
   }
 
   .portfolio-inner {
-    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    margin-top: 10%;
     gap: 20px;
-  }
-
-  .project {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    height: auto;
-    width: 80%;
-    padding: 10%;
-    background-image: url(./images/project-background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  .portfolio-img {
-    width: 70%;
-    margin-top: 40px;
   }
 
   h3 {
@@ -459,13 +394,5 @@ h3 {
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 500;
     color: white;
-    text-align: center;
-    margin-bottom: 0px;
-  }
-
-  .project-paragraphs {
-    text-align: center;
-    font-size: 16px;
-    width: 80%;
   }
 }
