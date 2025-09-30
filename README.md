@@ -1,7 +1,3 @@
-# webpack-template
+# home-page
 
-## Run:
-
-```
-npm install
-```
+live preview: https://petra-78.github.io/home-page/
